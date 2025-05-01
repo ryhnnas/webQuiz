@@ -1,0 +1,195 @@
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+}
+
+/* Warna latar belakang dan font global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navigasi */
+nav {
+    background-color: #4a90e2;
+    padding: 1em 2em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    margin-right: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #cce4ff;
+}
+
+/* Container utama */
+.container {
+    max-width: 800px;
+    margin: 2em auto;
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Judul */
+h2 {
+    color: #333;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* Formulir */
+form input,
+form select,
+form textarea,
+form button {
+    width: 100%;
+    padding: 0.8em;
+    margin: 0.5em 0 1em 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #357ab8;
+}
+
+/* Label */
+label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 1em;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f6f8;
+    font-weight: bold;
+}
+
+/* Flash messages */
+.flashes {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.flashes li {
+    background-color: #ffe3e3;
+    border-left: 6px solid #f44336;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    border-radius: 4px;
+}
+
+/* Timer */
+#timer {
+    font-weight: bold;
+    color: #d9534f;
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: -1em;
+    margin-bottom: 1.5em;
+}
+
+/* Link tombol */
+a.button {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+a.button:hover {
+    background-color: #357ab8;
+}
+
+/* Radio button lebih rapi */
+input[type="radio"] {
+    margin-right: 0.5em;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.option-box {
+    background-color: #f0f0f0;
+    padding: 1em;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.option-box:hover {
+    border-color: #4a90e2;
+    background-color: #e6f0ff;
+}
+
+.option-box input[type="radio"] {
+    margin-right: 1em;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        margin: 1em;
+        padding: 1.5em;
+    }
+}

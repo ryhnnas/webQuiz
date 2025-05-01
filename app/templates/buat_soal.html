@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/dashboard-guru">Back to Dashboard</a>
+    </nav>
+    <div class="container">
+        <h2>Create New Quiz</h2>
+        <form method="POST" action="/buat-soal">
+            <label for="question">Question</label>
+            <textarea id="question" name="question" required></textarea>
+
+            <label for="option_a">Option A</label>
+            <input type="text" id="option_a" name="option_a" required>
+
+            <label for="option_b">Option B</label>
+            <input type="text" id="option_b" name="option_b" required>
+
+            <label for="option_c">Option C</label>
+            <input type="text" id="option_c" name="option_c" required>
+
+            <label for="option_d">Option D</label>
+            <input type="text" id="option_d" name="option_d" required>
+
+            <label for="correct_option">Correct Option</label>
+            <select id="correct_option" name="correct_option" required>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+
+            <button type="submit">Create Quiz</button>
+        </form>
+    </div>
+</body>
+</html>

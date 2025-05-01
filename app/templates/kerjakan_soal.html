@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Quiz</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/dashboard-siswa">Back to Dashboard</a>
+    </nav>
+    <div class="container">
+        <h2>Take Quiz</h2>
+        <form method="POST" action="/kerjakan-soal">
+            <p>{{ question[1] }}</p>  <!-- question[1] = isi soal -->
+        
+            <label><input type="radio" name="answer" value="A" required> {{ question[2] }}</label><br>
+            <label><input type="radio" name="answer" value="B"> {{ question[3] }}</label><br>
+            <label><input type="radio" name="answer" value="C"> {{ question[4] }}</label><br>
+            <label><input type="radio" name="answer" value="D"> {{ question[5] }}</label><br>
+        
+            <!-- Tambahkan input hidden untuk mengirim question_id -->
+            <input type="hidden" name="question_id" value="{{ question[0] }}">
+        
+            <button type="submit">Submit Answer</button>
+        </form>
+    </div>
+
+    <div class="timer" id="timer">Waktu: 30 detik</div>
+    <script>
+        let timeLeft = 30;
+        const timerElement = document.getElementById("timer");
+
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = `Waktu: ${timeLeft} detik`;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                alert("Waktu habis! Jawaban akan dikirim otomatis.");
+                document.querySelector("form").submit();
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
